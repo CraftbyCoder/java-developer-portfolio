@@ -7,7 +7,7 @@
     let width, height;
     let particles = [];
 
-    const PARTICLE_COUNT = 80; // moderate number for performance
+    const PARTICLE_COUNT = 80;
     const MAX_SPEED = 0.3;
     const MIN_SPEED = 0.1;
     const PARTICLE_SIZE = 2.5;
@@ -20,8 +20,8 @@
                 y: Math.random() * height,
                 radius: Math.random() * PARTICLE_SIZE + 1,
                 speedY: Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED,
-                speedX: (Math.random() - 0.5) * 0.2, // very slight horizontal drift
-                opacity: Math.random() * 0.4 + 0.1, // low opacity
+                speedX: (Math.random() - 0.5) * 0.2,
+                opacity: Math.random() * 0.4 + 0.1,
             });
         }
     }
@@ -36,11 +36,10 @@
 
     function drawParticles() {
         ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = '#b0e0ff'; // soft cyan/white
         for (let p of particles) {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(176, 224, 255, ${p.opacity})`; // #b0e0ff with variable opacity
+            ctx.fillStyle = `rgba(200, 230, 255, ${p.opacity})`; // brighter particles
             ctx.fill();
         }
     }
@@ -50,7 +49,6 @@
             p.y += p.speedY;
             p.x += p.speedX;
 
-            // reset when off screen
             if (p.y > height + p.radius) {
                 p.y = -p.radius;
                 p.x = Math.random() * width;
@@ -72,16 +70,37 @@
 
     resizeCanvas();
     animate();
-
-    // (optional) reduce particle count if low performance – we keep it moderate
 })();
 
-// Existing mailto placeholder
+// Scroll animation using Intersection Observer
+(function() {
+    const sections = document.querySelectorAll('.section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: keep visible after first trigger
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px' // trigger a bit before section enters
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Also ensure hero is visible immediately on load (it will get class later if needed)
+    // But we want hero to be visible without waiting for scroll.
+    document.querySelector('.hero').classList.add('visible');
+})();
+
+// Mailto form (no action needed, but we keep the placeholder)
 (function() {
     const form = document.querySelector('.contact-form form');
     if (form) {
         form.addEventListener('submit', function(e) {
-            // mailto behavior is default – we keep it
+            // mailto behavior is default
         });
     }
 })();

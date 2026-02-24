@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Canvas for background particles (snow / floating dots) -->
     <canvas id="particleCanvas"></canvas>
 
     <nav class="navbar">
@@ -29,17 +28,20 @@
 
     <main class="container">
         <!-- HERO SECTION -->
-        <section class="hero" id="home">
-            <h1 class="hero-name">Priya Dharshini</h1>
-            <div class="hero-title">Junior Java Developer</div>
-            <div class="hero-tagline">
-                Clean code · logical thinking · problem solving <br> 
-                Building with Java, OOP, and a tester’s precision.
+        <section class="hero section" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-name">Priya Dharshini</h1>
+                <div class="hero-title">Junior Java Developer</div>
+                <div class="hero-tagline">
+                    Clean code · logical thinking · problem solving <br> 
+                    Building with Java, OOP, and a tester’s precision.
+                </div>
             </div>
         </section>
 
         <!-- ABOUT -->
-        <section id="about">
+        <section class="section" id="about">
             <h2>About me</h2>
             <div class="about-text">
                 <p>Associate Java developer with strong knowledge of Core Java, OOP, and data structures (Arrays, Strings). 
@@ -51,8 +53,8 @@
             </div>
         </section>
 
-        <!-- SKILLS (badges) -->
-        <section id="skills">
+        <!-- SKILLS -->
+        <section class="section" id="skills">
             <h2>Technical skills</h2>
             <div class="skills-grid">
                 <span class="skill-badge">Core Java</span>
@@ -66,14 +68,13 @@
                 <span class="skill-badge">JIRA</span>
                 <span class="skill-badge">SDLC</span>
                 <span class="skill-badge">Agile</span>
-                <!-- extra from resume but keep minimal -->
                 <span class="skill-badge">Collections</span>
                 <span class="skill-badge">SQL (basic)</span>
             </div>
         </section>
 
-        <!-- PROJECTS (interactive cards) -->
-        <section id="projects">
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -119,8 +120,8 @@
             </div>
         </section>
 
-        <!-- EXPERIENCE (transferable skills from testing) -->
-        <section id="experience">
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
             <h2>Experience & mindset</h2>
             <div class="exp-card">
                 <div class="exp-role">Associate Quality Test Engineer</div>
@@ -135,8 +136,8 @@
             </div>
         </section>
 
-        <!-- CONTACT (form with mailto) -->
-        <section id="contact">
+        <!-- CONTACT -->
+        <section class="section" id="contact">
             <h2>Let’s connect</h2>
             <div class="contact-form">
                 <form action="mailto:darshiniramesh1617@gmail.com" method="POST" enctype="text/plain">
@@ -158,7 +159,6 @@
             </div>
         </section>
 
-        <!-- FOOTER with minimal linkedin/github -->
         <footer class="footer">
             <span>© 2026 Priya Dharshini · junior java developer</span>
             <div class="footer-icons">
@@ -168,7 +168,6 @@
         </footer>
     </main>
 
-    <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
