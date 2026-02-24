@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Dharshini · Junior Java Developer</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for background particles (snow / floating dots) -->
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar">
+        <span class="logo">〈PD〉</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <h1 class="hero-name">Priya Dharshini</h1>
+            <div class="hero-title">Junior Java Developer</div>
+            <div class="hero-tagline">
+                Clean code · logical thinking · problem solving <br> 
+                Building with Java, OOP, and a tester’s precision.
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>About me</h2>
+            <div class="about-text">
+                <p>Associate Java developer with strong knowledge of Core Java, OOP, and data structures (Arrays, Strings). 
+                I hold an MCA from Bharathidasan University and have developed a robust analytical mindset through both 
+                academic projects and professional experience. My background in manual testing (1.9 years) sharpened my 
+                debugging skills and attention to application workflows — now I channel that into writing clean, 
+                maintainable Java code. Passionate about solving problems logically and continuously learning modern 
+                development practices.</p>
+            </div>
+        </section>
+
+        <!-- SKILLS (badges) -->
+        <section id="skills">
+            <h2>Technical skills</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">Core Java</span>
+                <span class="skill-badge">OOP</span>
+                <span class="skill-badge">Arrays</span>
+                <span class="skill-badge">Strings</span>
+                <span class="skill-badge">Exception Handling</span>
+                <span class="skill-badge">IntelliJ IDEA</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">JIRA</span>
+                <span class="skill-badge">SDLC</span>
+                <span class="skill-badge">Agile</span>
+                <!-- extra from resume but keep minimal -->
+                <span class="skill-badge">Collections</span>
+                <span class="skill-badge">SQL (basic)</span>
+            </div>
+        </section>
+
+        <!-- PROJECTS (interactive cards) -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">Bank Console</div>
+                    <div class="project-desc">A console-based banking system demonstrating OOP, file handling, and transaction logic. Includes account creation, deposit/withdraw, and statement generation.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">OOP</span>
+                        <span class="tech-tag">File I/O</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub repo</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Grade Manager</div>
+                    <div class="project-desc">Student grade management using collections and custom sorting. Calculates averages, assigns grades, and stores data in-memory with search/filter.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Collections</span>
+                        <span class="tech-tag">Arrays</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub repo</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Cart System</div>
+                    <div class="project-desc">Simulated e-commerce cart with item management, pricing, and exception handling for invalid inputs. Focus on clean logic and validation.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Exception Handling</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub repo</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Library CLI</div>
+                    <div class="project-desc">Simple library management with CRUD operations, search by title/author, and due date tracking. Demonstrates core Java skills.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Strings</span>
+                        <span class="tech-tag">OOP</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub repo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE (transferable skills from testing) -->
+        <section id="experience">
+            <h2>Experience & mindset</h2>
+            <div class="exp-card">
+                <div class="exp-role">Associate Quality Test Engineer</div>
+                <div class="exp-meta">Vertis Digital · 2024–2025 · manual testing background</div>
+                <div class="exp-desc">
+                    <i class="fas fa-bug" style="color: #b084cc; margin-right: 0.5rem;"></i>
+                    My testing experience gave me a sharp eye for edge cases, logical flow analysis, and debugging complex workflows. 
+                    I collaborated closely with developers to resolve issues and validate functionality — skills that now make me a 
+                    more thorough and quality‑focused developer. Understanding SDLC, Agile ceremonies, and the ability to think 
+                    from both a builder’s and a tester’s perspective allows me to write resilient Java code.
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT (form with mailto) -->
+        <section id="contact">
+            <h2>Let’s connect</h2>
+            <div class="contact-form">
+                <form action="mailto:darshiniramesh1617@gmail.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" required placeholder="What would you like to say?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Send message</button>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #7f95b5;">* opens your default email client</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER with minimal linkedin/github -->
+        <footer class="footer">
+            <span>© 2026 Priya Dharshini · junior java developer</span>
+            <div class="footer-icons">
+                <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
